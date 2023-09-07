@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <%- include('../partials/head'); %>
-    <script src="https://unpkg.com/htmx.org@1.5.0"></script>
+    <script src="https://unpkg.com/htmx.org@1.9.5"></script>
   </head>
   <body>
     <header><%- include('../partials/header'); %></header>
@@ -16,8 +16,8 @@
 
         <h3>Comments</h3>
         <ul id="response-div">
-          <% comments.forEach((comment) => { %> <%-
-          include('../partials/comment/item', {comment}); %> <% }); %>
+          <% comments.forEach((comment) => {
+          %><%-include('../partials/comment/item', {comment}); %> <% }); %>
         </ul>
       </form>
 
