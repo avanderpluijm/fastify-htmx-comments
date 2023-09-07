@@ -12,6 +12,7 @@ const app: FastifyPluginAsync<AppOptions> = async (
   fastify,
   opts
 ): Promise<void> => {
+  fastify.register(require('@fastify/formbody'))
   fastify.register(require('@fastify/view'), {
     root: './src/views',
     engine: {

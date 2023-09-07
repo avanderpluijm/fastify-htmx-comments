@@ -6,6 +6,7 @@ const autoload_1 = require("@fastify/autoload");
 const options = {};
 exports.options = options;
 const app = async (fastify, opts) => {
+    fastify.register(require('@fastify/formbody'));
     fastify.register(require('@fastify/view'), {
         root: './src/views',
         engine: {
